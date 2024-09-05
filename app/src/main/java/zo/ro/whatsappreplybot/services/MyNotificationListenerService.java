@@ -40,7 +40,21 @@ public class MyNotificationListenerService extends NotificationListenerService {
     public void onNotificationPosted(StatusBarNotification statusBarNotification) {
         super.onNotificationPosted(statusBarNotification);
 
-        if (statusBarNotification.getPackageName().equalsIgnoreCase("com.whatsapp")) {
+      //  if (statusBarNotification.getPackageName().equalsIgnoreCase("com.whatsapp")) {
+
+          List<String> monitoredPackages = Arrays.asList(
+            "com.whatsapp", 
+            "org.telegram.messenger",  // Telegram example
+            "com.exteragram.messenger",// Exteragram 
+            "com.facebook.orca",       // Facebook Messenger
+            "com.instagram.android",   // Instagram
+            "com.snapchat.android",    // Snapchat
+            "com.skype.raider"         // Skype
+          );
+
+    if (!monitoredPackages.contains(statusBarNotification.getPackageName())) {
+    return;
+    }
 
             Bundle extras = statusBarNotification.getNotification().extras;
             String messageId = statusBarNotification.getKey();
