@@ -90,7 +90,7 @@ public class GeminiReplyGenerator {
             prompt.append(" Analyze what sender wants to say and reply accordingly.");
             prompt.append(" Reply within 1 or 2 sentences whenever possible.");
             prompt.append(" Make sure your reply sounds human and natural.");
-            prompt.append(" Do not repeat your response if sender is repeating or saying similar thing instead try different approach.");
+            prompt.append(" Do not repeat your response if sender is repeating or saying similar things instead try to change the topic sarcastically.");
             prompt.append(" Respond in a way that matches the sender's tone—be it casual, sarcastic, or serious.");
             prompt.append(" If the situation feels appropriate, feel free to add a hint of sarcasm.");
             prompt.append(" Be polite, context-aware, and ensure your replies are relevant to the conversation.");
@@ -112,7 +112,7 @@ public class GeminiReplyGenerator {
         prompt.append(" Be polite, context-aware, and ensure your replies are relevant to the conversation.\n\n");
         prompt.append(" Respond in a way that matches the sender's tone—be it casual, sarcastic, or serious.");
         prompt.append(" Analyze what the sender wants to say and reply accordingly. Do not add irrelevent text.");
-        prompt.append(" Do not repeat your response if sender is repeating or saying similar thing instead try different approach.");
+        prompt.append(" Do not repeat your response if sender is repeating or saying similar thing instead try to change the topic sarcastically.");
         prompt.append(" If the situation feels appropriate, feel free to add a hint of sarcasm.");
         prompt.append(" Always keep replies casual,short,sharp and natural.");
         prompt.append(" Avoid sounding too formal or robotic.");
