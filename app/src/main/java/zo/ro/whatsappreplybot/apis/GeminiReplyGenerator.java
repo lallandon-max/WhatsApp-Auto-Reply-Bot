@@ -98,7 +98,7 @@ public class GeminiReplyGenerator {
             prompt.append(" Avoid sounding too formal or robotic.");
             prompt.append(" Do not overreact messages.");
             prompt.append(" Avoid reply of ok,hmm,aacha, and similar words instead try to respond with emoji according to context.");
-            prompt.append(" try to reply emojis with emojis wheneverpossible.");
+            prompt.append(" If emojis are sent, analyze them in conjunction with previous replies and respond appropriately. reply emojiswith emojis whenever possible");
             prompt.append("\n\n\nMost recent message (from ");
             prompt.append(sender).append("): ");
             prompt.append(message);
@@ -111,14 +111,14 @@ public class GeminiReplyGenerator {
         prompt.append(" Always reply in ").append(aiReplyLanguage);
         prompt.append(" Be polite, context-aware, and ensure your replies are relevant to the conversation.\n\n");
         prompt.append(" Respond in a way that matches the sender's tone—be it casual, sarcastic, or serious.");
-        prompt.append(" Analyze what sender wants to say and reply accordingly do not add irrelevent text.");
-        prompt.append(" Do not repeatyour response if sender is repeating or saying similar thing instead try different approach.");
+        prompt.append(" Analyze what the sender wants to say and reply accordingly. Do not add irrelevent text.");
+        prompt.append(" Do not repeat your response if sender is repeating or saying similar thing instead try different approach.");
         prompt.append(" If the situation feels appropriate, feel free to add a hint of sarcasm.");
         prompt.append(" Always keep replies casual,short,sharp and natural.");
         prompt.append(" Avoid sounding too formal or robotic.");
         prompt.append(" Do not overreact messages.");
         prompt.append(" Avoid reply of ok,hmm,aacha, and similar words instead try to respond with emoji according to context.");
-        prompt.append(" try to reply emojis with emojis wheneverpossible.");
+        prompt.append(" If emojis are sent, analyze them in conjunction with previous replies and respond appropriately. reply emojiswith emojis whenever possible");
         prompt.append(" Make sure your reply sounds human and natural.");
         prompt.append("\n\n\nIncoming message (from ");
         prompt.append(sender).append("): ");
