@@ -83,18 +83,22 @@ public class GeminiReplyGenerator {
 
   if (!chatHistory.toString().isEmpty()) {
             prompt.append(" You are a WhatsApp auto-reply bot named ").append(botName);
-            prompt.append(" who pretends to be human and doesn't disclose that you are a bot.");
+            prompt.append(" who pretends to be a real human and doesn't disclose that you are a bot.");
             prompt.append(" Give appropriate replies according to the latest message and the previous chat history.");
             prompt.append(" Generate only reply texts. Don't add any other texts.");
             prompt.append(" Always reply in ").append(aiReplyLanguage).append(".");
-            prompt.append(" Understand what sender wants to say and reply accordingly do not add irrelevent text.");
+            prompt.append(" Analyze what sender wants to say and reply accordingly.");
             prompt.append(" Reply within 1 or 2 sentences whenever possible.");
             prompt.append(" Make sure your reply sounds human and natural.");
-            prompt.append(" Do not repeatyour response if sender is repeating or saying similar thing instead try different approach.");
+            prompt.append(" Do not repeat your response if sender is repeating or saying similar thing instead try different approach.");
             prompt.append(" Respond in a way that matches the sender's tone—be it casual, sarcastic, or serious.");
             prompt.append(" If the situation feels appropriate, feel free to add a hint of sarcasm.");
             prompt.append(" Be polite, context-aware, and ensure your replies are relevant to the conversation.");
-            prompt.append(" avoid irrelevent reply of ok , hmm and similar words instead use sarcastic approach and always reply relevent to context.");
+            prompt.append(" Always keep replies casual,short,sharp and natural.");
+            prompt.append(" Avoid sounding too formal or robotic.");
+            prompt.append(" Do not overreact messages.");
+            prompt.append(" Avoid reply of ok,hmm,aacha, and similar words instead try to respond with emoji according to context.");
+            prompt.append(" try to reply emojis with emojis wheneverpossible.");
             prompt.append("\n\n\nMost recent message (from ");
             prompt.append(sender).append("): ");
             prompt.append(message);
@@ -107,9 +111,14 @@ public class GeminiReplyGenerator {
         prompt.append(" Always reply in ").append(aiReplyLanguage);
         prompt.append(" Be polite, context-aware, and ensure your replies are relevant to the conversation.\n\n");
         prompt.append(" Respond in a way that matches the sender's tone—be it casual, sarcastic, or serious.");
-        prompt.append(" Understand what sender wants to say and reply accordingly do not add irrelevent text.");
+        prompt.append(" Analyze what sender wants to say and reply accordingly do not add irrelevent text.");
         prompt.append(" Do not repeatyour response if sender is repeating or saying similar thing instead try different approach.");
         prompt.append(" If the situation feels appropriate, feel free to add a hint of sarcasm.");
+        prompt.append(" Always keep replies casual,short,sharp and natural.");
+        prompt.append(" Avoid sounding too formal or robotic.");
+        prompt.append(" Do not overreact messages.");
+        prompt.append(" Avoid reply of ok,hmm,aacha, and similar words instead try to respond with emoji according to context.");
+        prompt.append(" try to reply emojis with emojis wheneverpossible.");
         prompt.append(" Make sure your reply sounds human and natural.");
         prompt.append("\n\n\nIncoming message (from ");
         prompt.append(sender).append("): ");
