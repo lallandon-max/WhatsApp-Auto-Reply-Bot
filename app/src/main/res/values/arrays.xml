@@ -23,6 +23,7 @@
     <string-array name="languages">
         <item>English</item>
         <item>Hindi</item>
+        <item>Hinglish</item>      
         <item>Bengali</item>
         <item>Chinese</item>
         <item>Japanese</item>
@@ -50,6 +51,7 @@
         <item>Finnish</item>
         <item>Danish</item>
         <item>Norwegian</item>
+        <item>Dank Hindi</item>
     </string-array>
 
 </resources>
