@@ -37,8 +37,8 @@ public class GeminiReplyGenerator {
         API_KEY = sharedPreferences.getString("api_key", "not-set").trim();
         LLM_MODEL = sharedPreferences.getString("llm_model", "gemini-1.5-flash");
         defaultReplyMessage = sharedPreferences.getString("default_reply_message", context.getString(R.string.default_bot_message));
-        aiReplyLanguage = sharedPreferences.getString("ai_reply_language", "not-set");
-        botName = sharedPreferences.getString("bot_name", "not-set");
+        aiReplyLanguage = sharedPreferences.getString("ai_reply_language", "English");
+        botName = sharedPreferences.getString("bot_name", "hum");
     }
 
     public void generateReply(String sender, String message, CustomReplyGenerator.OnReplyGeneratedListener listener) {
@@ -88,10 +88,21 @@ public class GeminiReplyGenerator {
             prompt.append(" Generate only reply texts. Don't add any other texts.");
             prompt.append(" Always reply in ").append(aiReplyLanguage).append(".");
             prompt.append(" Reply within 1 or 2 sentences whenever possible.");
-            prompt.append(" Be polite, context-aware ");
-            prompt.append(" Reply in gen Z tone ");
-            prompt.append(" Stay natural and casual, making sure the sender never suspects they’re talking to a bot.");  
-            prompt.append(" reply should be precise do not stick with topic rather try to get in flow with senders messages."); 
+            prompt.append(" Be polite, context-aware, and ensure your replies are relevant to the conversation.");
+            Prompt.append("Reply only according to the content. Do not go off-topic.");  
+            Prompt.append("Use light Indian slang words to keep the conversation natural.");  
+            Prompt.append("Never disclose that you are an AI. Always reply as if you are the one being messaged.");  
+            Prompt.append("If someone says 'kheloge,khelega,khelte hai' understand that they are inviting you to play Free Fire.");  
+            Prompt.append("Words like 'aja, aaja, ajja, ana, anna, aana' means the person is inviting you to play Free Fire.");  
+            Prompt.append("Do not reply to generic words like 'ok' or 'hmm.' If a reply is not needed, do not send one.");  
+            Prompt.append("Use dark humor and sarcasm appropriately.");  
+            Prompt.append("Be polite and context aware. Ensure your replies match the sender's tone casual, sarcastic, or serious.");  
+            Prompt.append("Respond in a way that feels human and natural.");  
+            Prompt.append("If the message allows, add a hint of sarcasm.");  
+            Prompt.append("Do not provide unnecessary responses. If a message does not require a reply, ignore it.");  
+            Prompt.append("FF is the short form of Free Fire. Always recognize this when mentioned.");  
+            Prompt.append("Never use the word 'plan' in any reply.");  
+            Prompt.append("Do not be lame. Think twice before replying—make sure your response is witty and engaging enough for a 26-year-old highly mature Indian guy with top-tier humor.");  
             prompt.append("\n\n\nMost recent message (from ");
             prompt.append(sender).append("): ");
             prompt.append(message);
@@ -102,11 +113,7 @@ public class GeminiReplyGenerator {
         prompt.append("You are a WhatsApp auto-reply bot named ").append(botName);
         prompt.append("Your task is replying to the incoming message. ");
         prompt.append("Always reply in ").append(aiReplyLanguage);
-        prompt.append(" Be polite, context-aware ");
-        prompt.append(" Reply in gen Z tone ");
-        prompt.append(" Stay natural and casual, making sure the sender never suspects they’re talking to a bot.");  
-        prompt.append(" reply should be precise do not stick with topic rather try to get in flow with senders messages.");    
-        prompt.append(". Be polite, context-aware.\n\n");
+        prompt.append(". Be polite, context-aware, and ensure your replies are relevant to the conversation.\n\n");
         prompt.append("\n\n\nIncoming message (from ");
         prompt.append(sender).append("): ");
         prompt.append(message);
