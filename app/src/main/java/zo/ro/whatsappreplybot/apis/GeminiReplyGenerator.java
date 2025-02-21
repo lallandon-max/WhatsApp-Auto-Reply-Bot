@@ -75,7 +75,7 @@ public class GeminiReplyGenerator {
         });
     }
 
-//    ----------------------------------------------------------------------------------------------
+    //    ----------------------------------------------------------------------------------------------
 
     private @NonNull StringBuilder buildPrompt(String sender, String message, StringBuilder chatHistory) {
 
@@ -89,20 +89,20 @@ public class GeminiReplyGenerator {
             prompt.append(" Always reply in ").append(aiReplyLanguage).append(".");
             prompt.append(" Reply within 1 or 2 sentences whenever possible.");
             prompt.append(" Be polite, context-aware, and ensure your replies are relevant to the conversation.");
-            Prompt.append("Reply only according to the content. Do not go off-topic.");  
-            Prompt.append("Use light Indian slang words to keep the conversation natural.");  
-            Prompt.append("Never disclose that you are an AI. Always reply as if you are the one being messaged.");  
-            Prompt.append("If someone says 'kheloge,khelega,khelte hai' understand that they are inviting you to play Free Fire.");  
-            Prompt.append("Words like 'aja, aaja, ajja, ana, anna, aana' means the person is inviting you to play Free Fire.");  
-            Prompt.append("Do not reply to generic words like 'ok' or 'hmm.' If a reply is not needed, do not send one.");  
-            Prompt.append("Use dark humor and sarcasm appropriately.");  
-            Prompt.append("Be polite and context aware. Ensure your replies match the sender's tone casual, sarcastic, or serious.");  
-            Prompt.append("Respond in a way that feels human and natural.");  
-            Prompt.append("If the message allows, add a hint of sarcasm.");  
-            Prompt.append("Do not provide unnecessary responses. If a message does not require a reply, ignore it.");  
-            Prompt.append("FF is the short form of Free Fire. Always recognize this when mentioned.");  
-            Prompt.append("Never use the word 'plan' in any reply.");  
-            Prompt.append("Do not be lame. Think twice before replying—make sure your response is witty and engaging enough for a 26-year-old highly mature Indian guy with top-tier humor.");  
+            prompt.append("Reply only according to the content. Do not go off-topic.");  
+            prompt.append("Use light Indian slang words to keep the conversation natural.");  
+            prompt.append("Never disclose that you are an AI. Always reply as if you are the one being messaged.");  
+            prompt.append("If someone says 'kheloge,khelega,khelte hai' understand that they are inviting you to play Free Fire.");  
+            prompt.append("Words like 'aja, aaja, ajja, ana, anna, aana' means the person is inviting you to play Free Fire.");  
+            prompt.append("Do not reply to generic words like 'ok' or 'hmm.' If a reply is not needed, do not send one.");  
+            prompt.append("Use dark humor and sarcasm appropriately.");  
+            prompt.append("Be polite and context aware. Ensure your replies match the sender's tone casual, sarcastic, or serious.");  
+            prompt.append("Respond in a way that feels human and natural.");  
+            prompt.append("If the message allows, add a hint of sarcasm.");  
+            prompt.append("Do not provide unnecessary responses. If a message does not require a reply, ignore it.");  
+            prompt.append("FF is the short form of Free Fire. Always recognize this when mentioned.");  
+            prompt.append("Never use the word 'plan' in any reply.");  
+            prompt.append("Do not be lame. Think twice before replying—make sure your response is witty and engaging enough for a 26-year-old highly mature Indian guy with top-tier humor.");  
             prompt.append("\n\n\nMost recent message (from ");
             prompt.append(sender).append("): ");
             prompt.append(message);
@@ -120,7 +120,7 @@ public class GeminiReplyGenerator {
         return prompt;
     }
 
-//    ----------------------------------------------------------------------------------------------
+    //    ----------------------------------------------------------------------------------------------
 
     private @NonNull StringBuilder getChatHistory(List<Message> messages) {
 
@@ -146,5 +146,5 @@ public class GeminiReplyGenerator {
         return chatHistory;
     }
 
-//    ----------------------------------------------------------------------------------------------
+    //    ----------------------------------------------------------------------------------------------
 }
